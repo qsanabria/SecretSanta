@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@color/white_gray">
+
+    <include android:id="@+id/toolbar"
+        layout="@layout/toolbar">
+    </include>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toolbar"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp">
+
+        <TextView
+            android:id="@+id/titleExclusions"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/title_exclusions"
+            style="@style/style_h1"/>
+
+        <ScrollView
+            android:id="@+id/scrollView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/titleExclusions"
+            android:layout_above="@+id/fabBack">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <RadioGroup
+                    android:id="@+id/radioGroup"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="20dp">
+
+                    <RadioButton
+                        android:id="@+id/radioNoExclusions"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checked="true"
+                        android:onClick="clickNo"
+                        android:layout_weight="1"
+                        android:text="@string/no_exclusions"/>
+
+                    <RadioButton
+                        android:id="@+id/radioExclusions"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:onClick="clickYes"
+                        android:layout_weight="1"
+                        android:text="@string/yes_exclusions"/>
+                </RadioGroup>
+
+                <Spinner
+                    android:id="@+id/spinner1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/radioGroup">
+                </Spinner>
+
+                <TextView
+                    android:id="@+id/tvNotGift"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/do_not_gift"
+                    android:gravity="center"
+                    android:layout_below="@+id/spinner1"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"/>
+
+                <Spinner
+                    android:id="@+id/spinner2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tvNotGift">
+                </Spinner>
+
+                <CheckBox
+                    android:id="@+id/checkBoth"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/apply_both_ways"
+                    android:layout_below="@+id/spinner2"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="10dp"/>
+
+                <Button
+                    android:id="@+id/btnAddExclusion"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/button_add_exclusion"
+                    android:layout_below="@+id/checkBoth"
+                    android:layout_centerHorizontal="true"
+                    android:onClick="addExclusion"
+                    android:layout_marginTop="20dp"
+                    style="@style/Widget.AppCompat.Button.Borderless"
+                    android:background="@color/azure"/>
+
+                <Button
+                    android:id="@+id/btnSeeExclusion"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/button_see_exclusions"
+                    android:layout_below="@+id/btnAddExclusion"
+                    android:onClick="seeExclusions"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="10dp"
+                    style="@style/Widget.AppCompat.Button.Borderless"
+                    android:background="@color/azure"/>
+
+            </RelativeLayout>
+        </ScrollView>
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/fabBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentStart="true"
+            android:layout_gravity="start|bottom"
+            android:layout_margin="16dp"
+            android:src="@drawable/ic_arrow_left" />
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/fabNext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:layout_gravity="end|bottom"
+            android:layout_margin="16dp"
+            android:src="@drawable/ic_arrow_right" />
+
+
+    </RelativeLayout>
+
+</RelativeLayout>

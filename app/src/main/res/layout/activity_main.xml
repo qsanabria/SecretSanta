@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@color/white_gray"
+    tools:context=".MainActivity">
+
+    <include android:id="@+id/toolbar"
+        layout="@layout/toolbar">
+    </include>
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toolbar"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/titleNewEvent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/title_new_event"
+                style="@style/style_h1"/>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/cardNewEvent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="@dimen/corner_cards"
+                app:cardElevation="@dimen/corner_cards"
+                app:cardUseCompatPadding="true">
+
+                <TextView
+                    android:id="@+id/tvNameEvent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:padding="5dp"
+                    android:text="@string/new_event"
+                    android:gravity="center_vertical"/>
+
+                <EditText
+                    android:id="@+id/etNameEvent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:ems="10"
+                    android:inputType="text"
+                    android:layout_gravity="end"
+                    android:textAlignment="center"/>
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/cardPlaceEvent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="@dimen/corner_cards"
+                app:cardElevation="@dimen/corner_cards"
+                app:cardUseCompatPadding="true">
+
+                <TextView
+                    android:id="@+id/tvPlaceEvent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:padding="5dp"
+                    android:text="@string/place_event"
+                    android:gravity="center_vertical"/>
+
+                <EditText
+                    android:id="@+id/etPlaceEvent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:ems="10"
+                    android:inputType="text"
+                    android:layout_gravity="end"
+                    android:textAlignment="center"/>
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/cardDate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="@dimen/corner_cards"
+                app:cardElevation="@dimen/corner_cards"
+                app:cardUseCompatPadding="true">
+
+                <TextView
+                    android:id="@+id/tvDate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:padding="5dp"
+                    android:text="@string/date_event"
+                    android:gravity="center_vertical"/>
+
+                <EditText
+                    android:id="@+id/etDate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:ems="5"
+                    android:inputType="date"
+                    android:layout_gravity="end"
+                    android:textAlignment="center"/>
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/cardHour"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="@dimen/corner_cards"
+                app:cardElevation="@dimen/corner_cards"
+                app:cardUseCompatPadding="true">
+
+                <TextView
+                    android:id="@+id/tvHour"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:padding="5dp"
+                    android:text="@string/hour_event"
+                    android:gravity="center_vertical"/>
+
+                <EditText
+                    android:id="@+id/etHour"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:ems="5"
+                    android:inputType="datetime"
+                    android:layout_gravity="end"
+                    android:textAlignment="center"/>
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/cardTheme"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="@dimen/corner_cards"
+                app:cardElevation="@dimen/corner_cards"
+                app:cardUseCompatPadding="true">
+
+                <TextView
+                    android:id="@+id/tvTheme"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:padding="5dp"
+                    android:text="@string/theme_event"
+                    android:gravity="center_vertical"/>
+
+                <EditText
+                    android:id="@+id/etTheme"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:ems="10"
+                    android:inputType="text"
+                    android:layout_gravity="end"
+                    android:textAlignment="center"/>
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/cardPriceMin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="@dimen/corner_cards"
+                app:cardElevation="@dimen/corner_cards"
+                app:cardUseCompatPadding="true">
+
+                <TextView
+                    android:id="@+id/tvPriceMin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:padding="5dp"
+                    android:text="@string/min_event"
+                    android:gravity="center_vertical"/>
+
+                <EditText
+                    android:id="@+id/etPriceMin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:ems="5"
+                    android:inputType="number"
+                    android:layout_gravity="end"
+                    android:textAlignment="center"/>
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/cardPriceMax"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="@dimen/corner_cards"
+                app:cardElevation="@dimen/corner_cards"
+                app:cardUseCompatPadding="true">
+
+                <TextView
+                    android:id="@+id/tvPriceMax"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:padding="5dp"
+                    android:text="@string/max_event"
+                    android:gravity="center_vertical"/>
+
+                <EditText
+                    android:id="@+id/etPriceMax"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:ems="5"
+                    android:inputType="number"
+                    android:layout_gravity="end"
+                    android:textAlignment="center"/>
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.design.widget.FloatingActionButton
+                android:id="@+id/fab"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end|bottom"
+                android:src="@drawable/ic_arrow_right"
+                android:layout_margin="16dp"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentEnd="true"/>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</RelativeLayout>

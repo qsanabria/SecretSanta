@@ -1,0 +1,101 @@
+<resources>
+    <string name="app_name">Secret Santa</string>
+    <!--Actions-->
+    <string name="action_settings">Settings</string>
+    <string name="action_help">Help</string>
+    <!--Titles-->
+    <string name="title_new_event">New Event</string>
+    <string name="title_selection_group">Groups:</string>
+    <string name="title_new_participant">New Participant:</string>
+    <string name="title_new_group">Name of Group:</string>
+    <string name="title_exclusions">Exclusions:</string>
+    <string name="title_final_data">Description:</string>
+    <!--Strings Messages-->
+    <string name="from">From </string>
+    <string name="pound">£</string>
+    <string name="to"> to </string>
+    <string name="more_than">More than </string>
+    <string name="less_than">Less than </string>
+    <string name="without_define">Without be defined</string>
+    <!--Strings TextViews-->
+    <string name="new_event">Name Event:</string>
+    <string name="place_event">Place Event:</string>
+    <string name="date_event">Date:</string>
+    <string name="hour_event">Hour:</string>
+    <string name="theme_event">Theme(opc):</string>
+    <string name="min_event">Price min(opc):</string>
+    <string name="max_event">Price max(opc):</string>
+    <string name="group_selected">Group Selected:</string>
+    <string name="name_participant">Name:</string>
+    <string name="email_participant">E-Mail:</string>
+    <string name="participants">Participants:</string>
+    <string name="no_exclusions">No Exclusions</string>
+    <string name="yes_exclusions">Make Exclusions</string>
+    <string name="do_not_gift">Do not gift to:</string>
+    <string name="apply_both_ways">Apply in both ways</string>
+    <string name="will_be">It will be celebrated in:</string>
+    <string name="day">Day:</string>
+    <string name="hour">Hour:</string>
+    <string name="theme">Theme:</string>
+    <string name="value">Value of the gift:</string>
+    <string name="participants_election">Participants election</string>
+    <!--String Dialogs-->
+    <string name="dialog_get_event">Get data from the last group?</string>
+    <string name="dialog_group_choices">What would you like do with the group?</string>
+    <string name="dialog_exit">Would you like exit from the application?</string>
+    <string name="dialog_group_add">The group is now added</string>
+    <string name="dialog_group_duplicate">The group is already created</string>
+    <string name="dialog_name_new_group">Name of The group:</string>
+    <string name="dialog_name_used">Group name already taken</string>
+    <string name="dialog_group_modified">Group Modified</string>
+    <string name="dialog_participant_ok">Participant added</string>
+    <string name="dialog_participant_duplicate">The participant name is already taken</string>
+    <string name="dialog_just_add">To be done, click add</string>
+    <string name="dialog_out_creation_group">Would you like exit from the group creation?</string>
+    <string name="dialog_participant_choices">What would you like to do with the participant?</string>
+    <string name="dialog_sure">Are you sure?</string>
+    <string name="dialog_clear_list">Would you like delete the list?</string>
+    <string name="dialog_3elements">Needs to be at least 3 participants</string>
+    <string name="dialog_choose_group">To continue, select a group</string>
+    <string name="dialog_exit_exclusions">Would you like exit from Exclusions?</string>
+    <string name="dialog_message_exclusions">If come back all data from exclusions will be deleted</string>
+    <string name="dialog_delete_exclusion">Would you like delete the exclusion?</string>
+    <string name="dialog_exclusion_deleted">Exclusion deleted</string>
+    <string name="dialog_cannot_make_excl">Impossible make the draw, check the exclusions and try again</string>
+    <string name="dialog_valid_names">Must chose valid names</string>
+    <string name="dialog_itself">Self-exclusions made by default</string>
+    <string name="dialog_exist_both">The exclusion exist in both ways</string>
+    <string name="dialog_made_both_ways">Exclusion made (Both ways)</string>
+    <string name="dialog_exclusion_made">Exclusion made</string>
+    <string name="dialog_exclusion_exist">This exclusion already exist (see exclusions)</string>
+    <string name="dialog_generating_draw">Generating Draw...</string>
+    <string name="draw">Would you like send the data? Due to the high confidentiality all data will be send just by E-mail and
+    the will not appear on the screen. Before generate the draw, you must be connected to Internet.</string>
+    <string name="dialog_done">Event done!</string>
+    <string name="dialog_another_event">If you want make another event come back to introduce a new data</string>
+    <!--Text Buttons-->
+    <string name="button_recover">Recover</string>
+    <string name="button_cancel">Cancel</string>
+    <string name="button_exit">Exit</string>
+    <string name="button_new_group">New Group</string>
+    <string name="button_continue">Continue</string>
+    <string name="button_select">Select</string>
+    <string name="button_modify">Modify</string>
+    <string name="button_delete">Delete</string>
+    <string name="button_new_participant">New Participant</string>
+    <string name="button_clear_list">Clear List</string>
+    <string name="button_add_exclusion">Add Exclusions</string>
+    <string name="button_see_exclusions">See Exclusions</string>
+    <string name="button_back">Back</string>
+    <!--Error Text-->
+    <string name="error_storage">Impossible storage of data</string>
+    <string name="error_group_noAdd">Error adding group</string>
+    <string name="error_dbCursor">Error with database cursor</string>
+    <string name="error_etGroup">Group name not valid, insert another one</string>
+    <string name="error_show_participant">Error showing participant</string>
+    <string name="error_adding_participant">Error adding participant</string>
+    <string name="error_deleting_group">Impossible delete the group selected</string>
+    <string name="error_adding_excl">Impossible to add the exclusion</string>
+    <string name="error_send_email">The Email was not sent</string>
+    <string name="error_data">Error on the data</string>
+</resources>

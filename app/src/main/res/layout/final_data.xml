@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@color/white_gray">
+
+    <include android:id="@+id/toolbar"
+        layout="@layout/toolbar">
+    </include>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toolbar"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:layout_alignParentBottom="true">
+
+        <TextView
+            android:id="@+id/titleFinalData"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/title_final_data"
+            style="@style/style_h1"/>
+
+        <ScrollView
+            android:id="@+id/scroll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/titleFinalData">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/titleEvent"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    style="@style/style_pres"/>
+
+                <TextView
+                    android:id="@+id/tv1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/will_be"
+                    android:layout_below="@+id/titleEvent"
+                    android:gravity="center"
+                    style="@style/style_h2"/>
+
+                <TextView
+                    android:id="@+id/tvPlaceEvent"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:layout_below="@+id/tv1"
+                    android:gravity="center"
+                    style="@style/style_pres"/>
+
+                <TextView
+                    android:id="@+id/tv2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/day"
+                    android:layout_below="@+id/tvPlaceEvent"
+                    android:gravity="center"
+                    style="@style/style_h2"/>
+
+                <TextView
+                    android:id="@+id/tvDay"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:gravity="center"
+                    style="@style/style_pres"
+                    android:layout_alignBaseline="@+id/tv2"
+                    android:layout_toEndOf="@+id/tv2" />
+
+                <TextView
+                    android:id="@+id/tv3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/hour"
+                    android:gravity="center"
+                    android:layout_below="@id/tvPlaceEvent"
+                    android:layout_centerHorizontal="true"
+                    style="@style/style_h2"/>
+
+                <TextView
+                    android:id="@+id/tvHour"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:gravity="center"
+                    style="@style/style_pres"
+                    android:layout_alignBaseline="@+id/tv3"
+                    android:layout_toEndOf="@+id/tv3" />
+
+                <TextView
+                    android:id="@+id/tv4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/theme"
+                    android:gravity="center"
+                    android:layout_below="@id/tv3"
+                    style="@style/style_h2"/>
+
+                <TextView
+                    android:id="@+id/tvTheme"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:gravity="center"
+                    android:layout_below="@+id/tv4"
+                    style="@style/style_pres"/>
+
+                <TextView
+                    android:id="@+id/tv5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/value"
+                    android:gravity="center"
+                    android:layout_below="@id/tvTheme"
+                    style="@style/style_h2"/>
+
+                <TextView
+                    android:id="@+id/tvValue"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:gravity="center"
+                    android:layout_below="@+id/tv5"
+                    style="@style/style_pres"/>
+
+                <android.support.v7.widget.CardView
+                    android:id="@+id/cardTvParticipants"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:cardCornerRadius="@dimen/corner_cards"
+                    app:cardElevation="@dimen/corner_cards"
+                    android:layout_below="@+id/tvValue"
+                    android:layout_alignParentStart="true">
+
+                    <TextView
+                        android:id="@+id/tvParticipants"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:padding="5dp"
+                        android:text="@string/participants"
+                        android:gravity="center_vertical|center_horizontal"/>
+
+                </android.support.v7.widget.CardView>
+
+            </RelativeLayout>
+        </ScrollView>
+
+        <ListView
+            android:id="@+id/listParticipants"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/scroll"
+            android:layout_above="@+id/fabBack"/>
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/fabBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start|bottom"
+            android:src="@drawable/ic_arrow_left"
+            android:layout_margin="16dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentStart="true"/>
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/fabDraw"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end|bottom"
+            android:src="@drawable/ic_arrow_right"
+            android:layout_margin="16dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"/>
+
+    </RelativeLayout>
+</RelativeLayout>

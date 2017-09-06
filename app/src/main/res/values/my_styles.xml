@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="style_h1">
+        <item name="android:padding">@dimen/padding_h1</item>
+        <item name="android:textSize">@dimen/text_size_h1</item>
+        <item name="android:textAlignment">center</item>
+        <item name="android:textColor">@color/primary_dark</item>
+    </style>
+
+    <style name="style_h2">
+        <item name="android:padding">@dimen/padding_h2</item>
+        <item name="android:textSize">@dimen/text_size_h2</item>
+        <item name="android:textAlignment">center</item>
+        <item name="android:textColor">@color/primary</item>
+    </style>
+
+    <style name="style_pres">
+        <item name="android:padding">@dimen/padding_h2</item>
+        <item name="android:textSize">@dimen/text_size_h2</item>
+        <item name="android:textAlignment">center</item>
+    </style>
+</resources>

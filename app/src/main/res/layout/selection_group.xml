@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white_gray">
+
+    <include android:id="@+id/toolbar"
+        layout="@layout/toolbar">
+    </include>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toolbar"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp">
+
+        <TextView
+            android:id="@+id/titleSelectionGroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/title_selection_group"
+            style="@style/style_h1"/>
+
+        <ListView
+            android:id="@+id/listGroups"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+
+            android:layout_below="@+id/titleSelectionGroup"
+            android:layout_above="@+id/btnNewGroup" />
+
+        <Button
+            android:id="@+id/btnNewGroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:onClick="createNewGroup"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:background="@color/azure"
+            android:text="@string/button_new_group"/>
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/cardGroupSelected"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="@dimen/corner_cards"
+            app:cardElevation="@dimen/corner_cards"
+            app:cardUseCompatPadding="true"
+            android:layout_below="@+id/btnNewGroup"
+            android:layout_alignParentStart="true">
+
+            <TextView
+                android:id="@+id/tvGroupSelected"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="5dp"
+                android:text="@string/group_selected"
+                android:gravity="center_vertical|center_horizontal"/>
+
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/cardEtGroupSelected"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="@dimen/corner_cards"
+            app:cardElevation="@dimen/corner_cards"
+            app:cardUseCompatPadding="true"
+            android:layout_below="@+id/cardGroupSelected"
+            android:layout_alignParentStart="true">
+
+            <EditText
+                android:id="@+id/etGroupSelected"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/cardGroupSelected"
+                android:layout_gravity="center"
+                android:ems="10"
+                android:inputType="text"
+                android:textAlignment="center"
+                android:enabled="false"/>
+
+        </android.support.v7.widget.CardView>
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/fabBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start|bottom"
+            android:src="@drawable/ic_arrow_left"
+            android:layout_margin="16dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentStart="true"/>
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/fabNext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end|bottom"
+            android:src="@drawable/ic_arrow_right"
+            android:layout_margin="16dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>
